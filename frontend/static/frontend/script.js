@@ -27,9 +27,12 @@ function buildList(){
     var wrapper = document.getElementById('list-wrapper')
     //wrapper.innerHTML = ''
 
+    var baseUrl = window.location.protocol + '//' + window.location.host;
+    var url = baseUrl + '/api/task-list/';
 
 
     var url = 'http://127.0.0.1:8000/api/task-list/'
+    
 
     fetch(url)
     .then((resp) => resp.json())
